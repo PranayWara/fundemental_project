@@ -11,10 +11,10 @@
 
 ## Ideas for one - to - many:
 
-Recipes - ingredients,..
-Car makes - models,..
-Game studioes = games,..
-chocolate company = chocolate,..
+* Recipes - ingredients
+* Car makes - models
+* Game studioes = games
+* chocolate company = chocolate
 
 ### Risk Assesment
 
