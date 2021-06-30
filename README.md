@@ -4,8 +4,8 @@
 
 ## Plan Week 2
 
-* Risk Assessment
-* Ideas at least 4 (done)
+* Risk Assessment (Done but needs to keep updating)
+* Ideas at least 4 (DONE)
 * Kanban Board
 * Repo Started (DONE)
 
