@@ -18,5 +18,5 @@ chocolate company = chocolate,..
 
 ### Risk Assesment
 
-*GCP goes down
-*VW for SQL server goes down
+* GCP goes down
+* VW for SQL server goes down
