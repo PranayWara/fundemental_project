@@ -17,6 +17,8 @@
 * Game studioes = games (My fav)
 * chocolate company = chocolate
 
+Risk Assessment:  
+![Risk Assessment](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/risk_assessment_1.jpg)
 
 
 
