@@ -21,6 +21,8 @@
 * Game studioes to games - A lot of information and constant updating 
 * Chocolate company to chocolate - Simple but relatively dull
 
+From my initial ideas I would want to go for the game studios and there games.
+
 ## Proposal
 
 I have decided to create a site where the users are able to see the top 10 video games from certain Video Game Design studio's based on ratings.
@@ -45,31 +47,21 @@ Delete:
 ## Planning
  
 ### Risk Assessment:  
+My risk assessment is printed below which goes into detail the low and high risks of this project
+
 ![Risk Assessment](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/risk_assessment_1.jpg)
 
 ### Kanban Board:
 ![Kanban](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/kanban_board.jpg)
 
 ### Entity Relationship Diagram
-
+When designing the first attempt 
 #### First Attempt:
 ![First Attempt](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/initial_ERD.PNG)
 
 ### Pipeline for CI
 ![Pipline](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/pipeline_design.jpg)
 
-
-
-### Ideas
-
-
-## Plan Week 2
-
-* Risk Assessment (Done but needs to keep updating)
-* Ideas at least 4 (DONE)
-* Kanban Board (Done but needs to keep updating)
-* Repo Started (DONE)
-* User Story (Done but needs to keep updating)
 
 
 
