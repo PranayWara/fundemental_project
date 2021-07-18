@@ -1,6 +1,7 @@
 <html>
     <body>
-        <a href = "{{url_for ('add')  }}">'>Create Link</a>
+        <a href = "{{url_for ('add')  }}">'>Create Company</a>
+        <a href = "{{url_for ('create_game')  }}">'>Create Game</a>
         <h1>Companies</h1>
         {% block body%}
         <html>
@@ -11,6 +12,13 @@
         <br>
         {% for company in companies %}
             {{company.id}} | {{company.name}} | {{company.description}} | {{company.founders}}
+            <br>
+            {% if company.games %}
+                {{ company.games.name }}
+
+                <br>
+            {% endif %}
+            
             <a href = "{{url_for ('update', id=company.id)  }}">'>Update</a>
             <a href = "{{url_for ('delete', id=company.id)  }}">'>Delete</a>
             <br>    

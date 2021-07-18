@@ -1,9 +1,9 @@
 from re import A
-from application.models import Company
+from application.models import Company, Games
 from . import app, db
 from flask import Flask, render_template, request, redirect, url_for
-from application.models import Company
-from .forms import CompanyFrom
+from application.models import Company, Games
+from .forms import CompanyFrom, GamesForm
 
 @app.route('/')
 def home():
@@ -25,6 +25,23 @@ def add():
         return redirect(url_for('home'))
     else:
         return render_template('create.html', form=form)
+
+@app.route('/create_game', methods = ['GET', 'POST'])
+def create_game():
+    form = GamesForm()
+
+    if request.method == 'POST':
+
+        new_game = (Games(name=form.name.data, genre = form.genre.data, company_id = form.company.data))
+        db.session.add(new_game)
+        db.session.commit()
+
+        return redirect(url_for('home'))
+    else:
+        companies = Company.query.all()
+
+        form.company.choices = [(company.id, company.name) for company in companies]
+        return render_template('create_game.html', form=form)
 
 @app.route('/update/<int:id>', methods = ['GET', 'POST'])
 def update(id):
