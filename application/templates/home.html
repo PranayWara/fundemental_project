@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <a href = "{{url_for ('add')  }}">'>Create Link</a>
+        <h1>Companies</h1>
+        {% block body%}
+        <html>
+    <head>
+        <title>Companies</title>
+    </head>
+    <body>
+        <br>
+        {% for company in companies %}
+            {{company.id}} | {{company.name}} | {{company.description}} | {{company.founders}}
+            <a href = "{{url_for ('update', id=company.id)  }}">'>Update</a>
+            <a href = "{{url_for ('delete', id=company.id)  }}">'>Delete</a>
+            <br>    
+        {% endfor %}    
+    </body>
+</html>
+        {% endblock body %}
+    </body>
+</html>

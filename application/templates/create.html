@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <a href = "{{url_for ('home')  }}">'>Home Link</a>
+
+        <h1>Companies</h1>
+        {% block body%}
+        <html>
+    <head>
+        <title>Add Company</title>
+    </head>
+    <body>
+        <div class='form'>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.name.label }} {{ form.name }}
+                <br>
+                {{ form.description.label }} {{ form.description }}
+                <br>
+                {{ form.founders.label }} {{ form.founders}}
+                <br>
+                {{ form.submit.label }} {{ form.submit }}
+                <br>
+                {{ message }}
+            </form>
+        </div>
+    </body>
+</html>
+        {% endblock body %}
+    </body>
+</html>
