@@ -1,5 +1,4 @@
 from re import A
-from application.models import Company, Games
 from . import app, db
 from flask import Flask, render_template, request, redirect, url_for
 from application.models import Company, Games

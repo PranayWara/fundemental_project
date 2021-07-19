@@ -1,5 +1,5 @@
 from application import app, db
-from application.models import Company
+from application.models import Company, Games
 from flask import Flask, render_template
 
 

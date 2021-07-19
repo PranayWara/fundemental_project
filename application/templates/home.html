@@ -12,15 +12,16 @@
         <br>
         {% for company in companies %}
             {{company.id}} | {{company.name}} | {{company.description}} | {{company.founders}}
-            <br>
-            {% if company.games %}
-                {{ company.games.name }}
-
-                <br>
-            {% endif %}
-            
             <a href = "{{url_for ('update', id=company.id)  }}">'>Update</a>
             <a href = "{{url_for ('delete', id=company.id)  }}">'>Delete</a>
+            <br>
+            {% if company.games %}
+                {{ company.games }}
+                <br>
+            {% endif %}
+            <br>
+            
+
             <br>    
         {% endfor %}    
     </body>

@@ -9,6 +9,6 @@ class Company(db.Model):
 
 class Games(db.Model):
     gid = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(30), nullable=False)
+    name = db.Column(db.String(30))
     genre = db.Column(db.String(30))
     company_id = db.Column(db.Integer, db.ForeignKey('company.id'))
