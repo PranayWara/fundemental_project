@@ -4,7 +4,7 @@ from flask_testing import TestCase
 from flask import url_for
 import os
 from application import app, db
-from application.models import Company
+from application.models import Company, Games
 
 class TestBase(TestCase):
     def create_app(self):
@@ -42,6 +42,39 @@ class TestCreate(TestBase):
             follow_redirects = True
         )
 
-        assert response.current_url == url_for('home')
+        assert '3 | Test1 | Test2 | Test3' in response.data.decode()
 
-        raise AssertionError(response.data)
+    def test_create_game(self):
+        response = self.client.post(
+            url_for('create_game'),
+            data = {'name': 'Test1', 'genre':'Test2'},
+            follow_redirects = True,
+        )
+
+        self.assert200(response)
+        assert Games.query.filter_by(name='Test1').first() != None
+
+class TestUpdate(TestBase):
+    def test_update(self):
+        response = self.client.post(
+            url_for('update', id=1),
+            data = {'name': 'UpdateTest', 'description':'UpdateTest2', 'founders':'UpdateTest3'},
+            follow_redirects = True
+        )
+
+        assert '1 | UpdateTest | UpdateTest2 | UpdateTest3' in response.data.decode()
+        assert '2 | Valve | Big Company | Gabe'  in response.data.decode()
+        assert '1 | Run Unit Test | Test | PRANAY' not in response.data.decode()
+
+class TestDelete(TestBase):
+    def test_delete(self):
+        response = self.client.get(
+            url_for('delete', id = 1),
+            follow_redirects = True
+        )
+
+        assert '2 | Valve | Big Company | Gabe'   in response.data.decode()
+        assert '1 | Run Unit Test | Test | PRANAY' not in response.data.decode()
+
+
+
