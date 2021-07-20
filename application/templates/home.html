@@ -18,7 +18,9 @@
             {% for game in games %}
             {% if company.id == game.company_id %}
 
-                {{ game.name }}  
+                {{ game.name }}
+                <a href = "{{url_for ('update_game', id=game.id)  }}">'>Update</a> -->
+                <a href = "{{url_for ('delete_game', id=game.id)  }}">'>Delete</a> -->
 
                 <br>
             {% endif %}
