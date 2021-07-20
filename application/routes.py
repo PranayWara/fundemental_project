@@ -1,4 +1,5 @@
 from re import A
+from application.models import Company, Games
 from . import app, db
 from flask import Flask, render_template, request, redirect, url_for
 from application.models import Company, Games
@@ -7,7 +8,8 @@ from .forms import CompanyFrom, GamesForm
 @app.route('/')
 def home():
     companies = Company.query.all()
-    return render_template('home.html', companies = companies)
+    games = Games.query.all()
+    return render_template('home.html', companies = companies, games=games)
 
 @app.route('/create', methods = ['GET', 'POST'])
 def add():
@@ -59,6 +61,22 @@ def update(id):
     else:
         return render_template('update.html', form=form)
 
+@app.route('/update_game/<int:id>', methods = ['GET', 'POST'])
+def update_game(id):
+    form = GamesForm()
+    games = Games.query.get(id)
+
+    if request.method == 'POST':
+
+        games.name = form.name.data
+        games.genre = form.genre.data  
+        games.company = form.company.data
+        db.session.add(games)
+        db.session.commit()
+
+        return redirect(url_for('home'))
+    else:
+        return render_template('create_game.html', form=form)
 
 @app.route('/delete/<int:id>', methods = ['GET', 'POST'])
 def delete(id):
@@ -68,4 +86,10 @@ def delete(id):
 
     return redirect(url_for('home'))
 
+@app.route('/delete_game/<int:id>', methods = ['GET', 'POST'])
+def delete_game(id):
+    games = Games.query.get(id)
+    db.session.delete(games)
+    db.session.commit()
 
+    return redirect(url_for('home'))

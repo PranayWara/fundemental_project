@@ -6,6 +6,8 @@ import os
 from application import app, db
 from application.models import Company, Games
 
+
+
 class TestBase(TestCase):
     def create_app(self):
         
@@ -27,6 +29,18 @@ class TestBase(TestCase):
     def tearDown (self):
         db.drop_all()  
 
+class TestView(TestBase):
+    def test_home(self):
+        response = self.client.get(url_for('home'))  
+        self.assert200(response)
+
+    def test_create(self):
+        response = self.client.get(url_for('add'))  
+        self.assert200(response)
+    
+    def test_update(self):
+        response = self.client.get(url_for('update', id=1))  
+        self.assert200(response)
 
 class TestRead(TestBase):
     def test_home(self):
@@ -66,6 +80,16 @@ class TestUpdate(TestBase):
         assert '2 | Valve | Big Company | Gabe'  in response.data.decode()
         assert '1 | Run Unit Test | Test | PRANAY' not in response.data.decode()
 
+    def test_update_game(self):
+        response = self.client.post(
+            url_for('create_game', id=1),
+            data = {'name': 'UpdateTest1', 'genre':'UpdateTest2' },
+            follow_redirects = True
+        )
+        self.assert200(response)
+        assert Games.query.filter_by(name='UpdateTest1').first() != None
+
+
 class TestDelete(TestBase):
     def test_delete(self):
         response = self.client.get(
@@ -75,6 +99,13 @@ class TestDelete(TestBase):
 
         assert '2 | Valve | Big Company | Gabe'   in response.data.decode()
         assert '1 | Run Unit Test | Test | PRANAY' not in response.data.decode()
+    
+    def test_delete(self):
+        response = self.client.get(
+            url_for('delete', id = 1),
+            follow_redirects = True
+        )
 
-
-
+        assert '2 | Valve | Big Company | Gabe'   in response.data.decode()
+        assert '1 | Run Unit Test | Test | PRANAY' not in response.data.decode()
+    
