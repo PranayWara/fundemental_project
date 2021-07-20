@@ -7,7 +7,8 @@ from .forms import CompanyFrom, GamesForm
 @app.route('/')
 def home():
     companies = Company.query.all()
-    return render_template('home.html', companies = companies)
+    games = Games.query.all()
+    return render_template('home.html', companies = companies, games=games)
 
 @app.route('/create', methods = ['GET', 'POST'])
 def add():
@@ -89,7 +90,7 @@ def delete(id):
 
 
 
-@app.route('/delete/<int:id>', methods = ['GET', 'POST'])
+@app.route('/delete_game/<int:id>', methods = ['GET', 'POST'])
 def delete_game(id):
     games = Games.query.get(id)
     db.session.delete(games)
