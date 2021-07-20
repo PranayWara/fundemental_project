@@ -8,7 +8,8 @@ from .forms import CompanyFrom, GamesForm
 @app.route('/')
 def home():
     companies = Company.query.all()
-    return render_template('home.html', companies = companies)
+    games = Games.query.all()
+    return render_template('home.html', companies = companies, games=games)
 
 @app.route('/create', methods = ['GET', 'POST'])
 def add():

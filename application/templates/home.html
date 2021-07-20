@@ -15,11 +15,14 @@
             <a href = "{{url_for ('update', id=company.id)  }}">'>Update</a>
             <a href = "{{url_for ('delete', id=company.id)  }}">'>Delete</a>
             <br>
-            {% if company.games %}
-                {{ company.games }}
+            {% for game in games %}
+            {% if company.id == game.company_id %}
+
+                {{ game.name }}  
 
                 <br>
             {% endif %}
+            {% endfor %}
             
 
             <br>    
