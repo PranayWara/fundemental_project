@@ -59,22 +59,22 @@ def update(id):
     else:
         return render_template('update.html', form=form)
 
-# @app.route('/update_game/<int:id>', methods = ['GET', 'POST'])
-# def update_game(id):
-#     form = GamesForm()
-#     games = Games.query.get(id)
+@app.route('/update_game/<int:id>', methods = ['GET', 'POST'])
+def update_game(id):
+    form = GamesForm()
+    games = Games.query.get(id)
 
-#     if request.method == 'POST':
+    if request.method == 'POST':
 
-#         games.name = form.name.data
-#         games.genre = form.genre.data  
-#         games.company = form.company.data
-#         db.session.add(games)
-#         db.session.commit()
+        games.name = form.name.data
+        games.genre = form.genre.data  
+        games.company = form.company.data
+        db.session.add(games)
+        db.session.commit()
 
-#         return redirect(url_for('home'))
-#     else:
-#         return render_template('create_game.html', form=form)
+        return redirect(url_for('home'))
+    else:
+        return render_template('create_game.html', form=form)
 
 
 @app.route('/delete/<int:id>', methods = ['GET', 'POST'])
@@ -89,12 +89,12 @@ def delete(id):
 
 
 
-# @app.route('/delete/<int:id>', methods = ['GET', 'POST'])
-# def delete(id):
-#     games = Games.query.get(id)
-#     db.session.delete(games)
-#     db.session.commit()
+@app.route('/delete/<int:id>', methods = ['GET', 'POST'])
+def delete_game(id):
+    games = Games.query.get(id)
+    db.session.delete(games)
+    db.session.commit()
 
-#     return redirect(url_for('home'))
+    return redirect(url_for('home'))
 
 
