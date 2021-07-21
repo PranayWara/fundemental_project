@@ -176,6 +176,7 @@ This was the model for the database and the relationship.
 ### Testing:
 Using unit testing I was able to test each part of the application so was able to have a high coverage.
 #### Unit Testing:
+![Tests](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD_2.jpg)
 
 #### Report:
 #### Analyses:
