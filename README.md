@@ -179,26 +179,29 @@ This was the model for the database and the relationship.
  #### Not being able to display the games table on my homepage:
 
  The biggest issues I had when i came to this project is the fact that i wasnt able to display the games under the companies. Originally on my home.html page I had:
+
     {% if company.games %}
     {{ company.games.name }}
-
     <br>
     {% endif %}
 
 This wouldn't displace any games under the company. However if was to do 
+
     {{ company.games }}   
+
 the output would be
+
     <Games1>
+
 This showed that the relationship between the two tables was working so it had to be with the home page coding itself.
 
 After many hours I was able to find the right line to debugg the code and display the games:
-{% for game in games %}
-    {% if company.id == game.company_id %}
 
+    {% for game in games %}
+    {% if company.id == game.company_id %}
     {{ game.name }}
     <a href = "{{url_for ('update_game', id=game.id)  }}">'>Update</a> 
     <a href = "{{url_for ('delete_game', id=game.id)  }}">'>Delete</a>
-
     <br>
     {% endif %}
     {% endfor %}
@@ -210,6 +213,7 @@ Also meant I could implament the CRUD funtionality to the second table as well.
  When i first wrote my test, the coverage was 73%, meaning i needed to rewrite some of my tests.
 
  The main area where I was failing was viewing of the information on the homepage, with the below test I was able to increase the coverage:
+ 
     class TestView(TestBase):
         def test_home(self):
             response = self.client.get(url_for('home'))  
