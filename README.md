@@ -213,7 +213,7 @@ Also meant I could implament the CRUD funtionality to the second table as well.
  When i first wrote my test, the coverage was 73%, meaning i needed to rewrite some of my tests.
 
  The main area where I was failing was viewing of the information on the homepage, with the below test I was able to increase the coverage:
- 
+
     class TestView(TestBase):
         def test_home(self):
             response = self.client.get(url_for('home'))  
@@ -258,7 +258,9 @@ With an overall coverage of 82% the tests seemed to go relatively well. The CRUD
 ![Coverage Report Missing Terms](https://github.com/PranayWara/fundemental_project/blob/main/Images/coverage_missing_term.jpg)
 
 42-45 = Sending the user back to the main home page after creating. This can be solved by using headless testing, Selenium.
+
 66-79 = Even though my tests checks for updating the game. It doesnt check for updating the home page or seding the user back to the home page.
+
 91-95 = Deleting a game could not be tested and would need, selenium to test it.
 
 ### CI Server:
