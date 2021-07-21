@@ -296,8 +296,7 @@ With an overall coverage of 82% the tests seemed to go relatively well. The CRUD
 * pytest-cov
 
 ### CI Server:
-Using Jenkins I was able to test my application which has been directly pushed to my github repository:
-Using the script:
+Using Jenkins I was able to test my application which has been directly pushed to my github repository. This was done by creating a new VM and installing jenkins and giving it the ability to sudo install. By opening port 8080 I could use to write the following script:
 
     #!/bin/bash
     sudo apt-get install python3 -y
