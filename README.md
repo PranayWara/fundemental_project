@@ -72,8 +72,7 @@ This risk assessment has been updated constantly throughout the timeline of the 
 ![User Story](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/User_Stories.jpg)
 
 #### Tools:
-
-Jira
+* Jira
 
 ### Entity Relationship Diagram
 
@@ -110,12 +109,9 @@ LucidChart
 This was the model for the database and the one to many relationship.
 
 #### Tools:
-
-MySQL
-
-Python3
-
-.db
+* MySQL
+* Python3
+* .db
 
 ### Application:
 
@@ -194,20 +190,13 @@ Python3
         return 'home'
 
 #### Tools:
-
-python3
-
-pip3
-
-Flask
-
-Jinja
-
-SQLAlchemy
-
-flask_wtf
-
-pymysql
+* python3
+* pip3
+* Flask
+* Jinja
+* SQLAlchemy
+* flask_wtf
+* pymysql
 
 
 
@@ -302,18 +291,14 @@ With an overall coverage of 82% the tests seemed to go relatively well. The CRUD
 91-95 = Deleting a game could not be tested and would need, selenium to test it.
 
 #### Tools:
-
-python3
-
-pytest
-
-pytest-cov
+* python3
+* pytest
+* pytest-cov
 
 ### CI Server:
 
 #### Tools:
-
-Jenkins
+* Jenkins
 
 ### Future Plans:
 ![ERD Future](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD_2.jpg)
