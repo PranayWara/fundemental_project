@@ -186,7 +186,11 @@ When designing the tests I wanted to test each aspect of the build. All the CRUD
 With an overall coverage of 82% the tests seemed to go relatively well. The CRUD functionality for the Company table all passed the tests with 100% coverage. However where I lose coverage is when I test the CRUD functionality for the second table, Games. The Create and read where fine but the Update and Delete was loosing me a lot of coverage. I would see which lines where failing by using the:
     python3 -m pytest --cov=application --cov-report term-missing
 
+![Coverage Report Missing Terms](https://github.com/PranayWara/fundemental_project/blob/main/Images/coverage_missing_term.jpg)
 
+42-45 = Sending the user back to the main home page after creating. This can be solved by using headless testing, Selenium.
+66-79 = Even though my tests checks for updating the game. It doesnt check for updating the home page or seding the user back to the home page.
+91-95 = Deleting a game could not be tested and would need, selenium to test it.
 
 ### CI Server:
 
