@@ -174,9 +174,11 @@ This was the model for the database and the relationship.
         return 'home'
 
 ### Testing:
-Using unit testing I was able to test each part of the application so was able to have a high coverage.
+Using unit testing as for this project there was no need for selenium as the appication isnt advanved enough.
 #### Unit Testing:
-![Tests](https://github.com/PranayWara/fundemental_project/blob/feature/tests/test_unit.py)
+Here's a link to [Unit Tests][https://github.com/PranayWara/fundemental_project/blob/feature/tests/test_unit.py]
+
+When designing the tests I wanted to test each aspect of the build. All the CRUD functionality which passed and gave me a coverage of 82%.
 
 #### Report:
 #### Analyses:
