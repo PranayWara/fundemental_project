@@ -78,9 +78,10 @@ This risk assessment has been updated constantly throughout the timeline of the 
 
 
 ### Pipeline for CI
-![Pipline](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/pipeline_design.jpg)
+![Pipline](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/pipeline_design.jpg)
 
 ### Model:
+
 class Company:
     id = Column
     name = Column
@@ -99,8 +100,8 @@ This was the model for the database and the relationship.
 ### Application:
 
 #### Create:
-@app.route('/create')
-    form = CompanyFrom()
+
+    'form = CompanyFrom()
         new_company = (
             name=form.name.data, 
             description = form.description.data, 
@@ -110,7 +111,7 @@ This was the model for the database and the relationship.
 
         return redirect('home')
     else:
-        return ('create.html')
+        return ('create.html')'
 
 @app.route('/create_game')
     form = GamesForm()
