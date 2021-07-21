@@ -296,6 +296,21 @@ With an overall coverage of 82% the tests seemed to go relatively well. The CRUD
 * pytest-cov
 
 ### CI Server:
+Using Jenkins I was able to test my application which has been directly pushed to my github repository:
+Using the script:
+
+    #!/bin/bash
+    sudo apt-get install python3 -y
+    sudo apt-get install python3-pip -y
+    sudo apt-get install python3-venv -y
+    python3 -m venv venv
+    source venv/bin/activate
+    pip3 install -r requirments.txt
+    python3 -m pytest --cov=application
+
+This would go into my github repository clone it. Then install the relevant requirements and then run the unit tests.
+
+![Jenkins Test](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/coverage_jenkins.jpg)
 
 #### Tools:
 * Jenkins
