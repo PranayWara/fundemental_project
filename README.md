@@ -174,6 +174,68 @@ This was the model for the database and the relationship.
         return 'home'
 
 ### Issues:
+![Issues](https://github.com/PranayWara/fundemental_project/blob/main/Images/Issues.jpg)
+ 
+ #### Not being able to display the games table on my homepage:
+
+ The biggest issues I had when i came to this project is the fact that i wasnt able to display the games under the companies. Originally on my home.html page I had:
+    {% if company.games %}
+    {{ company.games.name }}
+
+    <br>
+    {% endif %}
+
+This wouldn't displace any games under the company. However if was to do 
+    {{ company.games }}   
+the output would be
+    <Games1>
+This showed that the relationship between the two tables was working so it had to be with the home page coding itself.
+
+After many hours I was able to find the right line to debugg the code and display the games:
+{% for game in games %}
+    {% if company.id == game.company_id %}
+
+    {{ game.name }}
+    <a href = "{{url_for ('update_game', id=game.id)  }}">'>Update</a> 
+    <a href = "{{url_for ('delete_game', id=game.id)  }}">'>Delete</a>
+
+    <br>
+    {% endif %}
+    {% endfor %}
+
+Also meant I could implament the CRUD funtionality to the second table as well.
+
+ #### Test Coverage being too small:
+
+ When i first wrote my test, the coverage was 73%, meaning i needed to rewrite some of my tests.
+
+ The main area where I was failing was viewing of the information on the homepage, with the below test I was able to increase the coverage:
+    class TestView(TestBase):
+        def test_home(self):
+            response = self.client.get(url_for('home'))  
+            self.assert200(response)
+
+        def test_create(self):
+            response = self.client.get(url_for('add'))  
+            self.assert200(response)
+        
+        def test_update(self):
+            response = self.client.get(url_for('update', id=1))  
+            self.assert200(response)
+
+However my tests still needed to cover the second table. By looking at the table itself instead of the output I was able to complete this but not cover all of the routes for example redirecting the user back to the homepage.
+
+    self.assert200(response)
+    assert Games.query.filter_by(name='Test1').first() != None
+
+The coverage is now at an acceptable 82%.
+
+ #### Not being able to delete or update games:
+
+ This was closely linked to the first problem, as the solutuion to the first was the same to this. Being able to finally call the information from the second tabel to the homepage meant calling it to update and delete was just simply copying the same code used in table 1 and changing the input to call for the second table.
+
+
+
 
 
 ### Testing:
