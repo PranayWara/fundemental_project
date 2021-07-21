@@ -10,6 +10,7 @@
     </head>
     <body>
         <br>
+        <div class='company'>
         {% for company in companies %}
             {{company.id}} | {{company.name}} | {{company.description}} | {{company.founders}}
             <a href = "{{url_for ('update', id=company.id)  }}">'>Update</a>
@@ -24,7 +25,9 @@
 
                 <br>
             {% endif %}
+        
             {% endfor %}
+        </div>
             
 
             <br>    
