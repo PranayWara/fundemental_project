@@ -113,65 +113,65 @@ This was the model for the database and the relationship.
         else:
             return ('create.html')
 
-@app.route('/create_game')
-    form = GamesForm()
-        new_game = (
-            name=form.name.data, 
-            genre = form.genre.data, 
-            company_id = form.company.data
-        )
-        db.session.commit()
+    @app.route('/create_game')
+        form = GamesForm()
+            new_game = (
+                name=form.name.data, 
+                genre = form.genre.data, 
+                company_id = form.company.data
+            )
+            db.session.commit()
 
-        return 'home')
-    else:
-        companies = all
-        return 'create_game.html'
+            return 'home')
+        else:
+            companies = all
+            return 'create_game.html'
 
 #### Update:
-@app.route('/update/<int:id>')
-    form = CompanyFrom()
-        companies name = form.name.data
-        companies description = form.description.data  
-        companies founders = form.founders.data
-        db.session.commit()
+    @app.route('/update/<int:id>')
+        form = CompanyFrom()
+            companies name = form.name.data
+            companies description = form.description.data  
+            companies founders = form.founders.data
+            db.session.commit()
 
-        return 'home'
-    else:
-        return 'update.html'
+            return 'home'
+        else:
+            return 'update.html'
 
-@app.route('/update_game/<int:id>')
-    form = GamesForm()
+    @app.route('/update_game/<int:id>')
+        form = GamesForm()
 
-        games name = form.name.data
-        games genre = form.genre.data  
-        games company = form.company.data
-        db.session.commit()
+            games name = form.name.data
+            games genre = form.genre.data  
+            games company = form.company.data
+            db.session.commit()
 
-        return 'home'
-    else:
-        return 'create_game.html'
+            return 'home'
+        else:
+            return 'create_game.html'
 #### Read:
-@app.route('/')
-def home():
-    companies = Company.query.all()
-    games = Games.query.all()
-    return render_template('home.html', companies = companies, games=games)
+    @app.route('/')
+    def home():
+        companies = Company.query.all()
+        games = Games.query.all()
+        return render_template('home.html', companies = companies, games=games)
 #### Delete:
-@app.route('/delete/<int:id>')
-def delete(id):
-    companies = Company.query.get(id)
-    db.session.delete(companies)
-    db.session.commit()
+    @app.route('/delete/<int:id>')
+    def delete(id):
+        companies = Company.query.get(id)
+        db.session.delete(companies)
+        db.session.commit()
 
-    return 'home'
+        return 'home'
 
-@app.route('/delete_game/<int:id>')
-def delete_game(id):
-    games = Games.query.get(id)
-    db.session.delete(games)
-    db.session.commit()
+    @app.route('/delete_game/<int:id>')
+    def delete_game(id):
+        games = Games.query.get(id)
+        db.session.delete(games)
+        db.session.commit()
 
-    return 'home'
+        return 'home'
 
 ### Testing:
 Using unit testing I was able to test each part of the application so was able to have a high coverage.
