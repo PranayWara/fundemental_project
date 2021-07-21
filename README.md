@@ -6,11 +6,11 @@ Software Design
 - README (done)
 Programming/Software Development
 - Code (done)
-- Tests 
-- Tools and Workflows
+- Tests (done)
+- Tools and Workflows (done)
 Testing
-- Designs test cases and scripts 
-- Analyses
+- Designs test cases and scripts (done)
+- Analyses (done)
 Systems Integration and Build
 - Build server
 - Tests Scripts 
@@ -71,14 +71,26 @@ This risk assessment has been updated constantly throughout the timeline of the 
 
 ![User Story](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/User_Stories.jpg)
 
+#### Tools:
+
+Jira
+
 ### Entity Relationship Diagram
 
 #### One to Many:
-![First Attempt](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD.jpg)
+![One to Many](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD.jpg)
+
+#### Tools:
+
+LucidChart
 
 
 ### Pipeline for CI
 ![Pipline](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/pipeline_design.jpg)
+
+#### Tools:
+
+LucidChart
 
 ### Model:
 
@@ -95,7 +107,15 @@ This risk assessment has been updated constantly throughout the timeline of the 
         genre = Column
         company_id = Column, db.ForeignKey('company.id')
 
-This was the model for the database and the relationship.
+This was the model for the database and the one to many relationship.
+
+#### Tools:
+
+MySQL
+
+Python3
+
+.db
 
 ### Application:
 
@@ -172,6 +192,24 @@ This was the model for the database and the relationship.
         db.session.commit()
 
         return 'home'
+
+#### Tools:
+
+python3
+
+pip3
+
+Flask
+
+Jinja
+
+SQLAlchemy
+
+flask_wtf
+
+pymysql
+
+
 
 ### Issues:
 ![Issues](https://github.com/PranayWara/fundemental_project/blob/main/Images/Issues.jpg)
@@ -263,7 +301,19 @@ With an overall coverage of 82% the tests seemed to go relatively well. The CRUD
 
 91-95 = Deleting a game could not be tested and would need, selenium to test it.
 
+#### Tools:
+
+python3
+
+pytest
+
+pytest-cov
+
 ### CI Server:
+
+#### Tools:
+
+Jenkins
 
 ### Future Plans:
 ![ERD Future](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD_2.jpg)
