@@ -12,8 +12,8 @@ Testing
 - Designs test cases and scripts (done)
 - Analyses (done)
 Systems Integration and Build
-- Build server
-- Tests Scripts 
+- Build server (done)
+- Tests Scripts (done)
 - Risks (done)
 
 ## Objective 
@@ -315,7 +315,11 @@ This would go into my github repository clone it. Then install the relevant requ
 * Jenkins
 
 ### Future Plans:
+My next stage would be to have a log in feature so users are able to favorite their favorite Company. This will all them to quickly see if there is any new games released.
+
+Video Studio Companies has also collaborated on games so having a many-to-many relationship will also the next step. The diagram below is a start to this plan:
 ![ERD Future](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD_2.jpg)
+
 
 
 
