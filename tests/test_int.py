@@ -1,12 +1,8 @@
-from flask.helpers import url_for
-from flask_sqlalchemy import SQLAlchemy
 from flask_testing import LiveServerTestCase
-from flask import url_for
 from selenium import webdriver
 from urllib.request import urlopen
 import os
 from application import app, db
-from application.models import Company, Games
 
 
 
