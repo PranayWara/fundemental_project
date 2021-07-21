@@ -82,18 +82,18 @@ This risk assessment has been updated constantly throughout the timeline of the 
 
 ### Model:
 
-class Company:
-    id = Column
-    name = Column
-    description = Column
-    founders = Column
-    games = relationship('Games', backref='games') 
+    class Company:
+        id = Column
+        name = Column
+        description = Column
+        founders = Column
+        games = relationship('Games', backref='games') 
 
-class Games:
-    id = Column, primary_key=True
-    name = Column
-    genre = Column
-    company_id = Column, db.ForeignKey('company.id')
+    class Games:
+        id = Column, primary_key=True
+        name = Column
+        genre = Column
+        company_id = Column, db.ForeignKey('company.id')
 
 This was the model for the database and the relationship.
 
