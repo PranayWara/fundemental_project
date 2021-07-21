@@ -181,7 +181,12 @@ Here's a link to [Unit Tests][https://github.com/PranayWara/fundemental_project/
 When designing the tests I wanted to test each aspect of the build. All the CRUD functionality which passed and gave me a coverage of 82%.
 
 #### Report:
+![Coverage Report](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/coverage.jpg)
 #### Analyses:
+With an overall coverage of 82% the tests seemed to go relatively well. The CRUD functionality for the Company table all passed the tests with 100% coverage. However where I lose coverage is when I test the CRUD functionality for the second table, Games. The Create and read where fine but the Update and Delete was loosing me a lot of coverage. I would see which lines where failing by using the:
+    python3 -m pytest --cov=application --cov-report term-missing
+
+
 
 ### CI Server:
 
