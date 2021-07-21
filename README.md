@@ -100,18 +100,18 @@ This was the model for the database and the relationship.
 ### Application:
 
 #### Create:
+    @app.route('/create')
+        form = CompanyFrom()
+            new_company = (
+                name=form.name.data, 
+                description = form.description.data, 
+                founders = form.founders.data
+            )
+            db.session.commit()
 
-    'form = CompanyFrom()
-        new_company = (
-            name=form.name.data, 
-            description = form.description.data, 
-            founders = form.founders.data
-        )
-        db.session.commit()
-
-        return redirect('home')
-    else:
-        return ('create.html')'
+            return redirect('home')
+        else:
+            return ('create.html')
 
 @app.route('/create_game')
     form = GamesForm()
