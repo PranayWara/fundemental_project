@@ -348,6 +348,7 @@ Using Jenkins I was able to test my application which has been directly pushed t
 
     python3 -m pytest --cov=application --cov-report xml --junitxml junit.xml
 
+Having linked the repository to jenkins using a webhook. Everytime I pushed something it would run the script.
 This would go into my github repository clone it. Then install the relevant requirements and then run the unit tests.
 
 ![Jenkins Test](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/coverage_jenkins.jpg)
