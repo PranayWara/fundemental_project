@@ -331,7 +331,7 @@ Showed the individual tests and if they passed or not.
 ##### Cobertura:
 Gave me the coverage breakdown and the trend of the application.
 
-![Cobertura Test]](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/cobertura.jpg)
+![Cobertura Test](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/cobertura.jpg)
 
 #### Tools:
 * Jenkins
