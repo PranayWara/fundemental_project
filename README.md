@@ -84,16 +84,14 @@ This risk assessment has been updated constantly throughout the timeline of the 
 ![One to Many](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD.jpg)
 
 #### Tools:
-
-LucidChart
+* LucidChart
 
 
 ### Pipeline for CI
 ![Pipline](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/pipeline_design.jpg)
 
 #### Tools:
-
-LucidChart
+* LucidChart
 
 ### Model:
 
@@ -212,10 +210,6 @@ This will add a new company or update one using forms.
 
 This will add a new game or update one using forms.
 
-
-
-
-
 #### Tools:
 * python3
 * pip3
@@ -224,8 +218,6 @@ This will add a new game or update one using forms.
 * SQLAlchemy
 * flask_wtf
 * pymysql
-
-
 
 ### Issues:
 ![Issues](https://github.com/PranayWara/fundemental_project/blob/main/Images/Issues.jpg)
@@ -291,10 +283,6 @@ The coverage is now at an acceptable 82%.
  #### Not being able to delete or update games:
 
  This was closely linked to the first problem, as the solutuion to the first was the same to this. Being able to finally call the information from the second tabel to the homepage meant calling it to update and delete was just simply copying the same code used in table 1 and changing the input to call for the second table.
-
-
-
-
 
 ### Testing:
 Using both Unit Testing and Integration Testing I was able to test the CRUD functionality of both of the tables and have a relatively high coverage.
