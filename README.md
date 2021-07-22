@@ -193,10 +193,26 @@ This was the model for the database and the one to many relationship.
 
         return 'home'
 
+
+Below are screenshots from the front end of the application. Very little designing was implemented but the functionlity all works well.
+
 #### Home Page:
 
 ![Home Page](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/home%20page.jpg)
+
 The Home page was a simple table with the companies information above and the games below. You are able to update which will take you back to form page or delete the entrey completely.
+
+#### Company From:
+![Company](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/company%20form.jpg)
+
+This will add a new company or update one using forms.
+
+#### Game From:
+![Game](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/game%20form.jpg)
+
+This will add a new game or update one using forms.
+
+
 
 
 
