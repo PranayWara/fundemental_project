@@ -270,23 +270,28 @@ The coverage is now at an acceptable 82%.
 
 
 ### Testing:
-Using unit testing as for this project there was no need for selenium as the appication isnt advanved enough.
+Using both Unit Testing and Integration Testing I was able to test the CRUD functionality of both of the tables and have a relatively high coverage.
 #### Unit Testing:
 Here's a link to [Unit Tests][https://github.com/PranayWara/fundemental_project/blob/feature/tests/test_unit.py]
 
 When designing the tests I wanted to test each aspect of the build. All the CRUD functionality which passed and gave me a coverage of 82%.
 
+#### Integration Testing:
+Here's a link to [Integration Tests][https://github.com/PranayWara/fundemental_project/blob/feature/tests/test_unit.py]
+
+Using integration testing I can test for redirects and the entire applicaiton is working using steps. 
+
 #### Report:
 ![Coverage Report](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/coverage.jpg)
 #### Analyses:
-With an overall coverage of 82% the tests seemed to go relatively well. The CRUD functionality for the Company table all passed the tests with 100% coverage. However where I lose coverage is when I test the CRUD functionality for the second table, Games. The Create and read where fine but the Update and Delete was loosing me a lot of coverage. I would see which lines where failing by using the:
+With an overall coverage of 82% the tests seemed to go relatively well. The CRUD functionality for the Company table all passed the tests with 100% coverage. However where I lose coverage in unit test when the CRUD functionality for the second table, Games. The Create and read where fine but the Update and Delete was loosing me a lot of coverage. I would see which lines where failing by using the:
     python3 -m pytest --cov=application --cov-report term-missing
 
 ![Coverage Report Missing Terms](https://github.com/PranayWara/fundemental_project/blob/main/Images/coverage_missing_term.jpg)
 
 42-45 = Sending the user back to the main home page after creating. This can be solved by using headless testing, Selenium.
 
-66-79 = Even though my tests checks for updating the game. It doesnt check for updating the home page or seding the user back to the home page.
+66-79 = Even though my tests checks for updating the game. It doesnt check for updating the home page or sending the user back to the home page.
 
 91-95 = Deleting a game could not be tested and would need, selenium to test it.
 
@@ -299,17 +304,32 @@ With an overall coverage of 82% the tests seemed to go relatively well. The CRUD
 Using Jenkins I was able to test my application which has been directly pushed to my github repository. This was done by creating a new VM and installing jenkins and giving it the ability to sudo install. By opening port 8080 I could use to write the following script:
 
     #!/bin/bash
+
     sudo apt-get install python3 -y
     sudo apt-get install python3-pip -y
     sudo apt-get install python3-venv -y
+    sudo apt install chromium-browser -y
+    sudo apt install wget unzip -y
+    version=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$(chromium-browser --version | grep -oP 'Chromium \K\d+'))
+    wget https://chromedriver.storage.googleapis.com/${version}/chromedriver_linux64.zip
+    sudo unzip chromedriver_linux64.zip -d /usr/bin
+    rm chromedriver_linux64.zip
+
     python3 -m venv venv
     source venv/bin/activate
     pip3 install -r requirments.txt
-    python3 -m pytest --cov=application
+
+    python3 -m pytest --cov=application --cov-report xml --junitxml junit.xml
 
 This would go into my github repository clone it. Then install the relevant requirements and then run the unit tests.
 
 ![Jenkins Test](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/coverage_jenkins.jpg)
+
+Using the plugin JUnit and Cobertura I was able to create a detailed report on the tests.
+#### JUnit:
+Showed the individual tests and if they passed or not.
+##### Cobertura:
+Gave me the coverage breakdown and the trend of the application.
 
 #### Tools:
 * Jenkins
