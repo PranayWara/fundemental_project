@@ -4,6 +4,7 @@ from wtforms.fields.core import SelectField
 from wtforms.validators import DataRequired, Length, ValidationError
 
 
+
 class CompanyFrom(FlaskForm):
     name = StringField('Input or Update the Name of video Studio Company', validators=[
         DataRequired()])
