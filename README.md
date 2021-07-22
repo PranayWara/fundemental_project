@@ -193,6 +193,13 @@ This was the model for the database and the one to many relationship.
 
         return 'home'
 
+#### Home Page:
+
+![Home Page](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/home%20page.jpg)
+The Home page was a simple table with the companies information above and the games below. You are able to update which will take you back to form page or delete the entrey completely.
+
+
+
 #### Tools:
 * python3
 * pip3
