@@ -73,7 +73,7 @@ This risk assessment has been updated constantly throughout the timeline of the 
 
 ### Kanban Board:
 
-![Kanban Board](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/User_Stories.jpg)
+![Kanban Board](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/kanban_requirements.jpg)
 
 #### Tools:
 * Jira
@@ -342,7 +342,7 @@ Gave me the coverage breakdown and the trend of the application.
 
 ### End of Project:
 
-![End of Project Kanban Board]()
+![End of Project Kanban Board](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/end%20of%20project%20kanban.jpg)
 
 All tasks where completed for the project.
 
