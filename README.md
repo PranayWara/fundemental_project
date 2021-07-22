@@ -71,6 +71,10 @@ This risk assessment has been updated constantly throughout the timeline of the 
 
 ![User Story](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/User_Stories.jpg)
 
+### Kanban Board:
+
+![Kanban Board](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/User_Stories.jpg)
+
 #### Tools:
 * Jira
 
@@ -335,6 +339,13 @@ Gave me the coverage breakdown and the trend of the application.
 
 #### Tools:
 * Jenkins
+
+### End of Project:
+
+![End of Project Kanban Board]()
+
+All tasks where completed for the project.
+
 
 ### Future Plans:
 My next stage would be to have a log in feature so users are able to favorite their favorite Company. This will all them to quickly see if there is any new games released.
