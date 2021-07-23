@@ -286,7 +286,7 @@ Here's a link to [Unit Tests][https://github.com/PranayWara/fundemental_project/
 When designing the tests I wanted to test each aspect of the build. All the CRUD functionality which passed and gave me a coverage of 82%.
 
 #### Integration Testing:
-Here's a link to [Integration Tests][hhttps://github.com/PranayWara/fundemental_project/blob/feature/tests/test_int.py]
+Here's a link to [Integration Tests][https://github.com/PranayWara/fundemental_project/blob/feature/tests/test_int.py]
 
 Using integration testing I can test for redirects and the entire applicaiton is working using steps. 
 
