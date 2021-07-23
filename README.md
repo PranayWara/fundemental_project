@@ -359,7 +359,8 @@ My next stage would be to have a log in feature so users are able to favorite th
 Video Studio Companies has also collaborated on games so having a many-to-many relationship will also the next step. The diagram below is a start to this plan:
 ![ERD Future](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD_2.jpg)
 
-
+### Author
+Pranay Wara
 
 
 
