@@ -46,18 +46,26 @@ Delete:
 ## Planning
  
 ### Risk Assessment:  
-My risk assessment is printed below which goes into detail the low and high risks of this project
+#### Initial risk assessment 
+Everything we had learned up to that poin.
+![Risk Assessment](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/initial_risk.jpg)
+12/July/2021
+
+My full risk assessment is printed below which goes into detail the low and high risks of this project
 This risk assessment has been updated constantly throughout the timeline of the project.
 
 ![Risk Assessment](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/risk_assessment_2.jpg)
+19/July/2021
 
 ### User Story:
 
 ![User Story](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/User_Stories.jpg)
+12/July/2021
 
 ### Kanban Board:
 
 ![Kanban Board](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/kanban_requirements.jpg)
+12/July/2021
 
 #### Tools:
 * Jira
@@ -66,6 +74,7 @@ This risk assessment has been updated constantly throughout the timeline of the 
 
 #### One to Many:
 ![One to Many](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/ERD.jpg)
+12/July/2021
 
 #### Tools:
 * LucidChart
@@ -73,6 +82,7 @@ This risk assessment has been updated constantly throughout the timeline of the 
 
 ### Pipeline for CI
 ![Pipline](https://raw.githubusercontent.com/PranayWara/fundemental_project/main/Images/pipeline_design.jpg)
+12/July/2021
 
 #### Tools:
 * LucidChart
