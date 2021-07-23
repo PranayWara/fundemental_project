@@ -1,21 +1,5 @@
 # Fundamental project for QA
 
-Mark Scheme:
-Software Design
-- Modeling (done
-- README (done)
-Programming/Software Development
-- Code (done)
-- Tests (done)
-- Tools and Workflows (done)
-Testing
-- Designs test cases and scripts (done)
-- Analyses (done)
-Systems Integration and Build
-- Build server (done)
-- Tests Scripts (done)
-- Risks (done)
-
 ## Objective 
 ### Overall objective with this project is the following:
 
